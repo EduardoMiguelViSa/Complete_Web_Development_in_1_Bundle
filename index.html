@@ -10,8 +10,69 @@
     </head>
 
     <body>
-        <!-- Uso de la etiqueta <form> = FORMULARIO  -->
-        sadas
+        <!-- Uso de la etiqueta <form> = FORMULARIO -->
+        <form action="a.html" method="POST"> <!-- GET Y POST -->
+            <fieldset>
+                <legend> INFORMACIÓN DE REGISTRO </legend>
+                <label> Nombre(s) </label>
+                <input type="text"> <!-- Diferentes type. -->
+                <br>
+                <label> Apellido(s) </label>
+                <input type="text">
+                <label> Hombre </label>
+                <input type="radio" name="genero" value="hombre">
+                <label> Mujer </label>
+                <input type="radio" name="genero" value="mujer">
+                <br>
+                <input type="submit" value="Registrar">
+                <br>
+                <select name="pais">
+                    <option selected value=""> País </option>
+                    <option value="mexico"> México </option>
+                    <option value="canada"> Canadá </option>
+                    <option value="espana"> España </option>
+                </select>
+                <select>
+                    <option selected value=""> Mes </option>
+                    <option value="enero"> Enero </option>
+                    <option value="febrero"> Febrero </option>
+                    <option value="marzo"> Marzo </option>
+                </select>
+                <textarea rows="10" cols="50"></textarea>
+                <button type="submit"> Clíc </button>
+            </fieldset>
+        </form>
+
+        <br>
+
+        <!-- Diferencias entre los input types de un formulario -->
+        <input type="password">
+        <input type="checkbox"> 
+        <input type="button" value="Clíc"> 
+        <input type="number" min="0" max="10" name="number" value="9" step="2"> 
+        <input type="date" min="2018-01-01" max="2021-12-31" name="date" value="2020-09-20"> 
+        <input type="datetime-local" name="date"> 
+        <input type="color" name="color"> 
+        <input type="time" name="time"> 
+        <input type="week" name="week"> 
+        <input type="month" name="month"> 
+        <input type="tel" name="tel"> 
+        <input type="search" name="search"> 
+        <input type="url" name="url"> 
+        <input type="email" name="email"> 
+
+        <p></p>
+
+        <!-- Propiedades del formulario -->
+<form method="POST" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded"> <!-- novalidate, enctype="text/plain, multipart/form-data, application/x-www-form-urlencoded" -->
+    <input type="text" name="text" value="Eduardo" readonly>
+    <input type="text" name="text" value="Eduardo" disabled>
+    <input type="text" name="text" value="Eduardo" size="50" maxlength="5">
+    <input type="text" name="text" placeholder="Nombre(s)" autocomplete="" required pattern="[A-Za-z]{5}">
+    <input type="image" src="logo.png"" name="text" width="200" height="100"> <!-- image/... -->
+    <input type="file" name="file" multiple accept="image/*"> <!-- .html -->
+    <input type="submit">
+</form>
     </body>
 
 </html>
